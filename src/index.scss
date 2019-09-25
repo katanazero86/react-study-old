@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Serif+KR|Roboto&display=swap');
+
+* {
+  font-family: 'Nanum Myeongjo', 'Noto Serif KR', 'Roboto', sans-serif, serif;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
