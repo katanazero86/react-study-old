@@ -29,6 +29,8 @@ webpack webpack-cli webpack-dev-server
 babel-loader css-loader style-loader node-sass sass-loader
 html-webpack-plugin
 
+10. koa koa-static pm2 cross-env 
+
 ```
 
 
