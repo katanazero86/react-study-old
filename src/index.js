@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 
 import './index.scss';
 
-const test = (
-    <div>TEST DIV!! 폰트 적용 확인</div>
-);
+// components
+import App from './components/App.js';
+
+
+// const test = (
+//     <div>TEST DIV!! 폰트 적용 확인</div>
+// );
 
 ReactDOM.render(
-    test,
+    <App/>,
     document.getElementById('root')
 );
