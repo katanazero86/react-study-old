@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './App.scss';
 
+import AppChild from './AppChild.js';
+
 
 export default function App() {
 
@@ -29,6 +31,9 @@ export default function App() {
           <p>
             결과 : {count} / {flag.toString()}
           </p>
+          <div>
+              <AppChild msg="부모 props" />
+          </div>
       </div>
     )
 }
