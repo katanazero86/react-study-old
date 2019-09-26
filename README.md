@@ -18,7 +18,7 @@ npm start
 4. mkdir public
 5. mkdir src
 6. make public/index.html
-7. make src/index.js
+7. make src/server.js
 8. make src/index.css  
 
 
