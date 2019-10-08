@@ -48,8 +48,8 @@ export default function App() {
                   <AppChild msg="부모 props에서 준 Msg" />
               </div>
               <Switch>
-                  <Route path="/about" component={About} />
-                  <Route path="/about2" component={About2} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/about2" component={About2} />
               </Switch>
           </main>
       </div>
