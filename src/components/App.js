@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+import {Switch, Route, Link} from 'react-router-dom';
 import './App.scss';
 
 import AppChild from './AppChild.js';
+import About from "./About.js";
+import About2 from "./About2.js";
 
 
 export default function App() {
@@ -20,20 +23,35 @@ export default function App() {
 
     return (
       <div className="app">
-          <p>
-              React useState Hooks
-          </p>
-          <div className="button-wrap">
-              <button onClick={incrementCount}> 값 증가 </button>
-              <button onClick={decrementCount}> 값 감소 </button>
-              <button onClick={() => {setFlag(!flag)}}>flag 변경</button>
-          </div>
-          <p>
-            결과 : {count} / {flag.toString()}
-          </p>
-          <div>
-              <AppChild msg="부모 props" />
-          </div>
+          <header>
+              <p>ROUTE TEST</p>
+              <Link to="/about">
+                  <button>About</button>
+              </Link>
+              <Link to="/about2">
+                  <button>About2</button>
+              </Link>
+          </header>
+          <main>
+              <p>
+                  React useState Hooks
+              </p>
+              <div className="button-wrap">
+                  <button onClick={incrementCount}> 값 증가 </button>
+                  <button onClick={decrementCount}> 값 감소 </button>
+                  <button onClick={() => {setFlag(!flag)}}>flag 변경</button>
+              </div>
+              <p>
+                  결과 : {count} / {flag.toString()}
+              </p>
+              <div>
+                  <AppChild msg="부모 props에서 준 Msg" />
+              </div>
+              <Switch>
+                  <Route path="/about" component={About} />
+                  <Route path="/about2" component={About2} />
+              </Switch>
+          </main>
       </div>
     )
 }

@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// router
+import {BrowserRouter} from 'react-router-dom';
+
 import './index.scss';
 
 // components
 import App from './components/App.js';
 
-
-// const test = (
-//     <div>TEST DIV!! 폰트 적용 확인</div>
-// );
-
 ReactDOM.render(
-    <App/>,
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>,
     document.getElementById('root')
 );
