@@ -16,7 +16,6 @@ koaApp.use(router.allowedMethods());
 const indexFile = fs.readFileSync(path.resolve(__dirname, './build/index.html'), {encoding : 'utf8'});
 
 koaApp.use(async (ctx) => {
-   console.log('test');
    ctx.body = indexFile;
 });
 
