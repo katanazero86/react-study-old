@@ -19,6 +19,16 @@ class PersonComponent extends Component {
         console.log('componentDidMount..');
     }
 
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        console.log('shouldComponentUpdate..')
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('getSnapshotBeforeUpdate..')
+        return null;
+    }
+
     componentDidUpdate() {
         console.log('componentDidUpdate..');
     }

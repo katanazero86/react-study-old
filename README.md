@@ -106,6 +106,28 @@ exact prop 을 지정해주면, path가 정확히 일치할 때만 보여지게 
 
 ![lifecycle](./md/lifecycle.PNG)
 출처 : https://ko.reactjs.org/docs/react-component.html
+```
+1. 초기화
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+2. 업데이트
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+3. ㅃㅇ (컴포너틑가 DOM에서 제거될 때 호출)
+componentWillUnmount()
+
+
+getDerivedStateFromProps(props, state)는 최초 마운트 시와 갱신 시 모두에서 render() 메서드를 호출하기 직전에 호출
+
+```
+
 
 
 
