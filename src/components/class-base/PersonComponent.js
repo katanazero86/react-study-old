@@ -40,13 +40,11 @@ class PersonComponent extends Component {
     }
 
     render() {
-
         return <div>
             <h2 style={{margin : 0, padding : '10px', fontSize : '13px'}}>Hello class base component, {this.state.nameState}</h2>
             <button onClick={() => {this.changeNameState()}}>변경!</button>
             <button onClick={() => {this.changeNameState('불꽃소방대')}}>불꽃소방대!</button>
         </div>;
-
     }
 
 }
