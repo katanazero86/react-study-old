@@ -6,6 +6,7 @@ import AppChild from './AppChild.js';
 import About from "./About.js";
 import About2 from "./About2.js";
 import PersonComponent from "./class-base/PersonComponent";
+import Person from "./hooks-base/Person";
 
 
 export default function App() {
@@ -50,6 +51,8 @@ export default function App() {
               </div>
               <div>
                   <PersonComponent/>
+                  <hr/>
+                  <Person/>
               </div>
               <hr/>
               <Switch>
