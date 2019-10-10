@@ -95,6 +95,19 @@ exact prop 을 지정해주면, path가 정확히 일치할 때만 보여지게 
 
 ```
 
+#### React Hooks
+
+```
+- Hooks 는 16.8 버전부터 도입되었다.
+- Hooks 를 이용하면, class 작성이 필요없이 상태값과 기존에 제공하는 기능들을 사용할 수 있다.
+- 함수에서 state와 react의 다양한 기능들을 사용하기 위해 나온 기술이다.
+
+```
+
+![lifecycle](./md/lifecycle.PNG)
+출처 : https://ko.reactjs.org/docs/react-component.html
+
+
 
 
 

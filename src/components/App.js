@@ -5,6 +5,7 @@ import './App.scss';
 import AppChild from './AppChild.js';
 import About from "./About.js";
 import About2 from "./About2.js";
+import PersonComponent from "./class-base/PersonComponent";
 
 
 export default function App() {
@@ -47,6 +48,10 @@ export default function App() {
               <div>
                   <AppChild msg="부모 props에서 준 Msg" />
               </div>
+              <div>
+                  <PersonComponent/>
+              </div>
+              <hr/>
               <Switch>
                   <Route exact path="/about" component={About} />
                   <Route exact path="/about2" component={About2} />
