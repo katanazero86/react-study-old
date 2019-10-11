@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 
-// class 기반으로 작성된 react 컴포넌트
+// connect 함수를 사용하여, 스토어 연동
+import {connect} from 'react-redux'
+import {increment, decrement} from "../../store/test/testStore";
 
+// class 기반으로 작성된 react 컴포넌트
 class PersonComponent extends Component {
 
     constructor(props) {
@@ -54,9 +57,42 @@ class PersonComponent extends Component {
             <h2 style={{margin : 0, padding : '10px', fontSize : '13px'}}>Hello class base component, {this.state.nameState}</h2>
             <button onClick={() => {this.changeNameState()}}>변경!</button>
             <button onClick={() => {this.changeNameState('불꽃소방대')}}>불꽃소방대!</button>
+
+            <div>스토어 숫자 : {this.props.number}</div>
+            <button style={{borderRadius: '5px',
+                border: '1px solid #37474f',
+                color: '#37474f',
+                backgroundColor : '#cfd8dc',
+                verticalAlign: 'middle',
+                cursor: 'pointer',
+                padding: '8px',
+                textAlign: 'center'}} onClick={this.props.increment}>증가</button>
+            <button style={{borderRadius: '5px',
+                border: '1px solid #37474f',
+                color: '#37474f',
+                backgroundColor : '#cfd8dc',
+                verticalAlign: 'middle',
+                cursor: 'pointer',
+                padding: '8px',
+                textAlign: 'center'}} onClick={this.props.decrement}>감소</button>
         </div>;
     }
 
 }
 
-export default PersonComponent
+
+// props 로 넣어줄 스토어 상태값
+const mapStateToProps = state => ({
+    number: state.counter.number,
+});
+
+// props 로 넣어줄 액션 생성함수
+const mapDispatchToProps = (dispatch) => ({
+    increment: () => dispatch(increment()),
+    decrement: () => dispatch(decrement()),
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(PersonComponent);
